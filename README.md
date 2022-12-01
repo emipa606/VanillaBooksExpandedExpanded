@@ -1,5 +1,6 @@
 # VanillaBooksExpandedExpanded
 
+
 ![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Ben Lubar and Efis mod
@@ -61,4 +62,4 @@ The modified writers' and typewriter table sprites are based on the work of Oska
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
-
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2894816192]Last updated 2022-12-01

@@ -1,5 +1,8 @@
 # Changelog for VanillaBooksExpandedExpanded
 
+1.4.1 - Fixed loadfolders, thanks Erazil
+
+
 1.4.0 - First publish.
 Used DeepL to update translations for ChineseSimplified, German, Russian
 
