@@ -61,5 +61,5 @@ The modified writers' and typewriter table sprites are based on the work of Oska
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2894816192]Last updated 2022-12-01
+[/list
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2894816192]Last updated 2022-12-05
