@@ -1,5 +1,8 @@
 # Changelog for VanillaBooksExpandedExpanded
 
+1.4.3 - Changed the graphics used for the deep storage bookshelf, thank you Erazil!
+
+
 1.4.2 - Updated graphics for ideology books, thanks Erazil
 
 

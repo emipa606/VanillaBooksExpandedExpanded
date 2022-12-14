@@ -8,7 +8,7 @@
     <nomatch Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/graphicData/texPath</xpath>
       <value>
-        <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf_VBEE_Placeholder</texPath>
+        <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v3</texPath>
       </value>
     </nomatch>
   </Operation>
