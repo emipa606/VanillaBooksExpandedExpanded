@@ -5,6 +5,8 @@
 Update of Ben Lubar and Efis mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2650429441
 
+- Updated Ideology book and bookshelf-graphics by Erazil
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
 	
@@ -64,4 +66,5 @@ The modified writers' and typewriter table sprites are based on the work of Oska
 
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2894816192]Last updated 2022-12-14
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2894816192]Last updated 2022-12-17

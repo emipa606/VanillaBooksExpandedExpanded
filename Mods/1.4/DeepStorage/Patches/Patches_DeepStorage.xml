@@ -5,11 +5,45 @@
     <mods>
       <li>Vanilla Furniture Expanded - Props and Decor</li>
     </mods>
-    <nomatch Class="PatchOperationReplace">
-      <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/graphicData/texPath</xpath>
-      <value>
-        <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v3</texPath>
-      </value>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf</texPath>
+          </value>
+        </li>
+        <li Class="PatchOperationadd">
+          <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/comps</xpath>
+          <value>
+            <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+              <randomGraphics>
+                <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf</li>
+                <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v1</li>
+                <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v2</li>
+                <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v3</li>
+              </randomGraphics>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+    <nomatch Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Expanded Framework</li>
+      </mods>
+      <match Class="PatchOperationadd">
+        <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/comps</xpath>
+        <value>
+          <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+            <randomGraphics>
+              <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v1</li>
+              <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v2</li>
+              <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v3</li>
+            </randomGraphics>
+          </li>
+        </value>
+      </match>
     </nomatch>
   </Operation>
 </Patch>

@@ -5,7 +5,7 @@
     <label>bookshelf</label>
     <description>A bookshelf for the storage of readable material. Items stored in this will not deteriorate, even if outside.</description>
     <graphicData>
-      <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf</texPath>
+      <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v1</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(3.55,3.45)</drawSize>
