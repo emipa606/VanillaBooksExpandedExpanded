@@ -10,6 +10,7 @@
       <drawSize>1</drawSize>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
+    <uiIconPath>Things/Item/VBEE_BookIdeoligion_MenuIcon</uiIconPath>
     <costStuffCount>20</costStuffCount>
     <stuffCategories>
       <li>Leathery</li>

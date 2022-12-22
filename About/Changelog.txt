@@ -1,5 +1,8 @@
 # Changelog for VanillaBooksExpandedExpanded
 
+1.4.5 - Some more fixes
+
+
 1.4.4 - Bookcase will use random gfx if VFE is loaded
 
 

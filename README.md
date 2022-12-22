@@ -67,4 +67,5 @@ The modified writers' and typewriter table sprites are based on the work of Oska
 
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2894816192]Last updated 2022-12-17
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2894816192]Last updated 2022-12-22

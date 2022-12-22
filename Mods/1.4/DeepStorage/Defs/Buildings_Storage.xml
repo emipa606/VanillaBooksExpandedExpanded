@@ -33,6 +33,9 @@
       <fixedStorageSettings>
         <priority>Important</priority>
         <filter>
+          <thingDefs>
+            <li>VBE_UnfinishedBook</li>
+          </thingDefs>
           <categories>
             <li>VBE_Books</li>
           </categories>

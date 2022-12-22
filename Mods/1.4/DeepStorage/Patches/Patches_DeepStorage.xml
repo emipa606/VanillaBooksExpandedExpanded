@@ -13,7 +13,7 @@
             <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf</texPath>
           </value>
         </li>
-        <li Class="PatchOperationadd">
+        <li Class="PatchOperationadd" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
           <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/comps</xpath>
           <value>
             <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
@@ -28,22 +28,17 @@
         </li>
       </operations>
     </match>
-    <nomatch Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Expanded Framework</li>
-      </mods>
-      <match Class="PatchOperationadd">
-        <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/comps</xpath>
-        <value>
-          <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
-            <randomGraphics>
-              <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v1</li>
-              <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v2</li>
-              <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v3</li>
-            </randomGraphics>
-          </li>
-        </value>
-      </match>
+    <nomatch Class="PatchOperationadd" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+      <xpath>Defs/ThingDef[defName="VanillaBooksExpandedExpanded_Bookshelf"]/comps</xpath>
+      <value>
+        <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+          <randomGraphics>
+            <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v1</li>
+            <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v2</li>
+            <li>Things/Building/FurnitureProps/Bookshelf/Bookshelf_v3</li>
+          </randomGraphics>
+        </li>
+      </value>
     </nomatch>
   </Operation>
 </Patch>
