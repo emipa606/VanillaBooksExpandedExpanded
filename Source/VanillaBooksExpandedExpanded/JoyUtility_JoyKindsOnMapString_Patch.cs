@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using System.Text;
+﻿using System.Text;
 using HarmonyLib;
 using RimWorld;
 using VanillaBooksExpanded;
@@ -11,9 +10,6 @@ namespace VanillaBooksExpandedExpanded;
 [HarmonyPatch(typeof(JoyUtility), nameof(JoyUtility.JoyKindsOnMapString))]
 internal static class JoyUtility_JoyKindsOnMapString_Patch
 {
-    private static readonly MethodInfo
-        CheckAppendJoyKind = AccessTools.Method(typeof(JoyUtility), "CheckAppendJoyKind");
-
     public static string Postfix(string __result, Map map)
     {
         var sb = new StringBuilder(__result);
@@ -26,7 +22,7 @@ internal static class JoyUtility_JoyKindsOnMapString_Patch
         {
             if (VanillaBooksExpandedExpanded.IsJoyBook(item))
             {
-                CheckAppendJoyKind.Invoke(null, new object[] { sb, item, VBE_DefOf.VBE_Reading, map });
+                JoyUtility.CheckAppendJoyKind(sb, item, VBE_DefOf.VBE_Reading, map);
             }
         }
 

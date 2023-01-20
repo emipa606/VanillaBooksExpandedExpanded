@@ -12,8 +12,6 @@ namespace VanillaBooksExpandedExpanded;
 [StaticConstructorOnStartup]
 public class JobDriver_ReadIdeoBook : JobDriver_ReadBook
 {
-    private static readonly FieldInfo CertaintyField = AccessTools.Field(typeof(Pawn_IdeoTracker), "certainty");
-
     private static readonly FieldInfo CurReadingTicksField =
         AccessTools.Field(typeof(JobDriver_ReadBook), "curReadingTicks");
 
@@ -63,7 +61,7 @@ public class JobDriver_ReadIdeoBook : JobDriver_ReadBook
             {
                 // can't call OffsetCertainty or it'll spam text motes
                 var modified = Mathf.Clamp01(jobPawn.ideo.Certainty + ideoBook.GetCertaintyAmountPerTick(jobPawn));
-                CertaintyField.SetValue(jobPawn.ideo, modified);
+                jobPawn.ideo.Certainty = modified;
             }
 
             if (book.Props.joyAmountPerTick > 0f)
