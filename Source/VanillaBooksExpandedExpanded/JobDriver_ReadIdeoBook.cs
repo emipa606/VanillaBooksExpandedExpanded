@@ -32,6 +32,8 @@ public class JobDriver_ReadIdeoBook : JobDriver_ReadBook
         yield return Toils_Haul.StartCarryThing(TargetIndex.B);
         yield return ((Toil)FindSeatsForReadingMethod.Invoke(this, new object[] { pawn })).FailOnForbidden(
             TargetIndex.C);
+        yield return Toils_Reserve.Reserve(TargetIndex.C);
+        yield return Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
 
         var toil = new Toil();
         toil.AddPreInitAction(delegate
@@ -118,20 +120,21 @@ public class JobDriver_ReadIdeoBook : JobDriver_ReadBook
                 if (book.Props.destroyAfterReading)
                 {
                     book.Destroy();
+                    return;
                 }
-                else
+
+                Thing ideoligionBook = book;
+                if (book.ParentHolder is Pawn_CarryTracker pawn_CarryTracker)
                 {
-                    Thing ideoligionBook = book;
-                    var currentPriority = StoreUtility.CurrentStoragePriorityOf(ideoligionBook);
-                    if (StoreUtility.TryFindBestBetterStoreCellFor(ideoligionBook, pawn, Map, currentPriority,
-                            pawn.Faction,
-                            out var foundCell))
-                    {
-                        job.SetTarget(TargetIndex.C, foundCell);
-                        job.SetTarget(TargetIndex.B, ideoligionBook);
-                        job.count = ideoligionBook.stackCount;
-                        return;
-                    }
+                    pawn_CarryTracker.TryDropCarriedThing(pawn.Position, ThingPlaceMode.Near, out ideoligionBook);
+                }
+
+                var currentPriority = StoreUtility.CurrentStoragePriorityOf(ideoligionBook);
+                if (StoreUtility.TryFindBestBetterStoreCellFor(book, pawn, Map, currentPriority, pawn.Faction,
+                        out var storeCell))
+                {
+                    var j = HaulAIUtility.HaulToCellStorageJob(pawn, ideoligionBook, storeCell, false);
+                    pawn.jobs.jobQueue.EnqueueFirst(j);
                 }
 
                 EndJobWith(JobCondition.Succeeded);

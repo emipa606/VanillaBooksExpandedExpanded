@@ -1,5 +1,8 @@
 # Changelog for VanillaBooksExpandedExpanded
 
+1.4.7 - Should now properly sit down and read ideoligy books
+
+
 1.4.6 - Reading ideology books should now work
 
 
