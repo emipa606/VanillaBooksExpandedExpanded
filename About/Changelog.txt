@@ -1,5 +1,8 @@
 # Changelog for VanillaBooksExpandedExpanded
 
+1.4.8 - Last update, added end-of-life message
+
+
 1.4.7 - Should now properly sit down and read ideoligy books
 
 

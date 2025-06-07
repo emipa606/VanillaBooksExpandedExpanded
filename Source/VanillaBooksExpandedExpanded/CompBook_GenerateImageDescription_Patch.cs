@@ -1,10 +1,9 @@
 ﻿using HarmonyLib;
-using VanillaBooksExpanded;
 using Verse;
 
 namespace VanillaBooksExpandedExpanded;
 
-[HarmonyPatch(typeof(CompBook), nameof(CompBook.GenerateImageDescription))]
+[HarmonyPatch(typeof(CompProperties_Book), nameof(CompBook.GenerateImageDescription))]
 internal static class CompBook_GenerateImageDescription_Patch
 {
     public static bool Prefix(ref TaggedString __result, CompBook __instance)
